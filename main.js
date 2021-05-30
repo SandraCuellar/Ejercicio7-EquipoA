@@ -3,7 +3,11 @@ const equiposMayoresEdad = (equipos, edadComparacion) =>
   equipos.filter((equipo) => equipo.asignado.empleado.edad > edadComparacion);
 
 // Devuelve un array con los equipos asignados a personas de esa provincia
-const equiposProvincia = (equipos, provincia) => {};
+const equiposProvincia = (equipos, provincia) =>
+  equipos.filter(
+    (equipo) =>
+      equipo.asignado.provincia.toLowerCase() > provincia.toLowerCase()
+  );
 
 // Devuelve una array de provincias donde haya equipos NO SE REPITEN las provincias
 const provincias = (equipos) => {};
