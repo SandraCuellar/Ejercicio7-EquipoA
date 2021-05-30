@@ -29,7 +29,20 @@ const equiposTipo = (equipos, tipo) => {};
 const trabajadoresTipo = (equipos, tipo) => {};
 
 // Devuelve una array de equipos organizados por tipos y de la forma puesta en el ejercicio (mirar el git del profesor)
-const equiposPorTipo = (equipos) => {};
+const equiposPorTipo = (equipos) => {
+  const tipos = Array.from(new Set(equipos.map((equipo) => equipo.tipo)));
+
+  const tiposObjeto = [];
+
+  for (const contador in tipos) {
+    tiposObjeto.push({
+      tipo: tipos[contador],
+      equipos: equipos.filter((equipo) => equipo.tipo === tipos[contador]),
+    });
+  }
+
+  return tiposObjeto;
+};
 
 // devuelve un array de equipos del tipo especificado y asignados a trabajadores de esa provincia
 const equiposTipoLocalidad = (equipos, tipo, localidad) => {};
