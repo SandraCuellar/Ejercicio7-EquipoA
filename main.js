@@ -14,7 +14,9 @@ const provincias = (equipos) =>
   Array.from(new Set(equipos.map((equipo) => equipo.asignado.provincia)));
 
 // Devuelve una array de puestos de trabajadores con equipo asignado
-const puestos = (equipos) => {};
+const puestos = (equipos) => Array.from (new Set(equipos.map ((equipo) => equipo.asignado.empleado.puesto)));
+
+
 
 // Devuelve la media de edad de trabajadores con equipo asignado
 const edadMedia = (equipos) => {};
