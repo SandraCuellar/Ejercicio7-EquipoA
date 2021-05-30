@@ -45,7 +45,12 @@ const equiposPorTipo = (equipos) => {
 };
 
 // devuelve un array de equipos del tipo especificado y asignados a trabajadores de esa provincia
-const equiposTipoLocalidad = (equipos, tipo, localidad) => {};
+const equiposTipoLocalidad = (equipos, tipo, localidad) =>
+  equipos.filter(
+    (equipo) =>
+      equipo.tipo.toLowerCase() === tipo.toLowerCase() &&
+      equipo.asignado.poblacion.toLowerCase() === localidad.toLowerCase()
+  );
 
 // Devuelve un array de objetos con la forma especificada (mirar git profesor)
 const resumenEquipos = (equipos) => {};
