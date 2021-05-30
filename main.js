@@ -10,7 +10,8 @@ const equiposProvincia = (equipos, provincia) =>
   );
 
 // Devuelve una array de provincias donde haya equipos NO SE REPITEN las provincias
-const provincias = (equipos) => {};
+const provincias = (equipos) =>
+  Array.from(new Set(equipos.map((equipo) => equipo.asignado.provincia)));
 
 // Devuelve una array de puestos de trabajadores con equipo asignado
 const puestos = (equipos) => {};
