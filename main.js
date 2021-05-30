@@ -6,7 +6,7 @@ const equiposMayoresEdad = (equipos, edadComparacion) =>
 const equiposProvincia = (equipos, provincia) =>
   equipos.filter(
     (equipo) =>
-      equipo.asignado.provincia.toLowerCase() > provincia.toLowerCase()
+      equipo.asignado.provincia.toLowerCase() === provincia.toLowerCase()
   );
 
 // Devuelve una array de provincias donde haya equipos NO SE REPITEN las provincias
