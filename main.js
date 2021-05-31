@@ -16,16 +16,21 @@ const provincias = (equipos) =>
 // Devuelve una array de puestos de trabajadores con equipo asignado
 const puestos = (equipos) => Array.from (new Set(equipos.map ((equipo) => equipo.asignado.empleado.puesto)));
 
-
-
 // Devuelve la media de edad de trabajadores con equipo asignado
 const edadMedia = (equipos) => {};
 
 // Devuelve los equipos ordenados por edad de trabajadores con equipo asignado
 const equiposPorEdad = (equipos) => {};
 
+
+
 // Devuelve los equipos de ese tipo
-const equiposTipo = (equipos, tipo) => {};
+const equiposTipo = (equipos, tipo) => {
+ return equipos.filter((equipo)=> { return tipo=== equipo.tipo.toLowerCase()
+  })
+};
+console.log(equiposTipo (equipos, "Portátil"));
+
 
 // Devuelve los trabajadores con equipo del equipo asignado
 const trabajadoresTipo = (equipos, tipo) => {};
